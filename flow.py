@@ -14,7 +14,7 @@ def emit_trace_event(obj: Flow, run: FlowRun, state: State) -> None:
     emit_event(
         event=f"trace.{state.name}",
         resource={
-            f"prefect.resource.id": "prefect.flow-run.{run.id}",
+            f"prefect.resource.id": f"prefect.flow-run.{run.id}",
             "trace_id": trace_id,
         },
     )
